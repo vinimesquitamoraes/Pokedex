@@ -9,6 +9,7 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+  zoom: 80%;
 }
 
 
@@ -71,7 +72,7 @@ button {
 }
 .search-input {
   position: absolute;
-  width: 677px;
+  width: 609.1px;
   height: 69px;
   top: 0;
   left: 0;
@@ -79,8 +80,18 @@ button {
   border: none;
   z-index: 5;
   outline: none;
+  color: white;
+  font-size: 30px;
 }
+.search-input::placeholder {
+  color: #585F70; 
+  font-family: 'Russian One', sans-serif;
+  font-weight: 700; 
+}
+
 .search-icon {
+  border: none;
+  cursor: pointer;
   position: absolute;
   width: 6.79%;
   height: 66.67%;
