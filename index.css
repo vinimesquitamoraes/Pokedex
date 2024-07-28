@@ -1,11 +1,4 @@
 /*Header=========================================================================*/
-.cabecalho {
-  background-color: #7c09b5;                    /*Cor Do Fundo*/
-  color: bisque;                                            /*Cor Da Fonte*/
-  width: 100%;                                                 /*Fazer esse container ocupar todo o espaço horizontal*/
-  text-align: center;                                          /*Fazer o conteudo desse container sempre ficar centralizado*/  
-  max-height: 271px;  
-}
 
 /*Barra de Pesquisa ==================================================================*/
 /* O container que segura a barra de pesquisa, seu conteudo sempre deve ficar centralizado */
@@ -13,14 +6,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10%;
-
+  padding: 5%;
+  background-color: #7c09b5;
 }
+
 /* A aparencia da barra de pesquisa */
-.barraPesquisaStyle {
+.barraPesquisaStyle {  
   color: #585F70;                                                          /*Cor da Fonte*/
   font-weight: 700;                                                            /*Grossura da Fonte*/
   width: 100%;                                                                  /*Ocupar todo o espaço horizontal disponivel do barraPesquisaHolder*/
+  min-width: 500px;  
   box-sizing: border-box;                                                 /*Incluem o padding ao calcular o tamanho, sem ele a barra de pesquisa vai pra fora da tela*/
   border-radius: 16px;                                                      /*Arrendondamento das bordas*/
   font-size: 16px;                                                              /*Tamanho da fonte*/
@@ -30,8 +25,84 @@
   background-size: 25px;                                                 /*O tamanho da Lupa*/
   background-repeat: no-repeat;                                     /*Só existir uma lupa*/
   padding: 12px 20px 12px 40px;                                     /*Padding da Lupa em relação a borda da barra de pesquisa*/
-  border: none;                                                                 /*Sem bordas*/
+  border: none;                                                                 /*Sem bordas*/  
+}
+/*Se a tela for menor que 600px a barra de pesquisa nao tera tamanho minimo e se adequara ao tamanho do barraPesquisaHolder*/
+@media only screen and (max-width: 600px) {
+  .barraPesquisaStyle {
+    min-width: 0;         
+  }
+}
+/*Body  ==============================================================================*/
+html body{
+  min-height: 100%;
+  min-width: 100%;
+  background-color: yellow;
+  padding: 0%;
+  margin: 0;
+}
+/*Corpo ==============================================================================*/
+.corpo {
+  display: flex;
+  justify-content: center;  
+  height: 100%;
+}
+@media only screen and (max-width: 600px) {
+  .corpo {       
+    flex-wrap: wrap;
+  }
 }
 
+/*Informações do pikomon ==================================================================*/
+/*A parte esquerda do site onde tem imagens do pokemon como tb nome e numero*/
+.leftContainer{ 
+  display: flex;
+  justify-content: flex-end;
+  background-color: #34b509;  
+  
+  width: 100%;
+  height: 100%;
+}
 
+  /*Contem o header com sprite nome e numero e a imagem grande*/
+  .pikomonDadosImages{
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    height: 658px;  
+    background-color: aqua;
+  }
 
+  /*headerPikomon ======================================================================*/
+  /*container do header*/
+  .pikomonDadosImages_Header{
+    background-color: rgb(56, 84, 84);
+    width: 100%;
+    height: 128px;
+  }
+  .pikomonDadosImages_Body{
+    display: flex;    
+    width:100%; 
+    height:100%;     
+    background-image:url(assets/images/BubaGrande.png);
+    background-repeat: no-repeat;                                                         /*Só existir uma imagem*/
+    background-position: center;
+    margin:0;
+    padding:0; 
+  }
+
+/*pikomonDadosTexts  ===================================================================*/
+/*A parte direita do site onde estao as informações em forma de texto do pokemon*/
+.rightContainer{ 
+  background-color: #b50909;  
+  width: 100%;
+  height: 100%;
+}
+
+.pikomonDadosTextsHolder{
+  width: 700;
+  height: 658;  
+  background-color: rgb(54, 163, 163);
+  content:url(assets/images/BubaGrande.png);
+  background-size: cover;
+}
