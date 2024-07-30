@@ -9,7 +9,7 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  zoom: 80%;
+  zoom: 90%;
 }
 
 
@@ -87,6 +87,7 @@ button {
   color: #585F70; 
   font-family: 'Russian One', sans-serif;
   font-weight: 700; 
+  left: 16px;
 }
 
 .search-icon {
@@ -178,12 +179,10 @@ button {
   height: 115px;
   top: 50%;
   left: 0;
-  background: url(./assets/images/5e60b8e2-2c19-4616-94f0-1d02faf13bfe.png)
-    no-repeat center;
-  background-size: cover;
   transform: translate(0, -55.65%);
   z-index: 12;
 }
+
 .vector {
   position: absolute;
   height: 71px;
@@ -268,8 +267,6 @@ button {
   height: 78.57%;
   top: 21.43%;
   left: 14.57%;
-  background: url(./assets/images/729058142317b47e92aecbac5144dce7b528d29f.png)
-    no-repeat center;
   background-size: cover;
   z-index: 17;
 }

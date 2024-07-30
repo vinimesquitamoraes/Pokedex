@@ -7,6 +7,7 @@
     <title>POkedexI</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Russo+One:wght@400&display=swap" />
     <link rel="stylesheet" href="index.css" />
+	<script src='Script.js'> </script>
   </head>
 
   <body>
@@ -15,8 +16,10 @@
       <div class="header">
         <div class="search-bar">
           <div class="rectangle"></div>
-          <input class="search-input" type="text" placeholder="Enter name">
-          <input class="search-icon" type="button">
+			<div class="autocomplete" style="width:300px;">
+			<input class="search-input" type="seach" placeholder="Enter name">
+			<input class="search-icon" type="button" onclick="fetchPokemon()">
+			</div>
         </div>
       </div>      
 
@@ -24,17 +27,13 @@
         <div class="picomon-image">
           <div class="picomon-header">
             <div class="frame">
-              <div class="bulbasaur-xy"></div>
+              <img class="bulbasaur-xy" src="./assets/images/5e60b8e2-2c19-4616-94f0-1d02faf13bfe.png" alt="Bulbasaur">
               <div class="vector"></div>
-              <div class="tipos">
-                <div class="image"></div>
-                <div class="image-1"></div>
-              </div>
               <span class="nome">Bulbasaur</span
               ><span class="text-3">0001</span>
             </div>
           </div>
-          <div class="bulbasaur"></div>
+          <img class="bulbasaur" src="./assets/images/729058142317b47e92aecbac5144dce7b528d29f.png">
         </div>
         <div class="dados-da-negah">
           <button class="descricao-breve">
@@ -93,5 +92,5 @@
     </div>
     
   </body>
-
+	
 </html>
